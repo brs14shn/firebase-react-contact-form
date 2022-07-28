@@ -8,10 +8,13 @@ import {
   TableBody,
   Paper
 } from "@mui/material";
+import { useFetch } from "../../utils/function";
 
 
 
 const Contacts = () => {
+
+  const {isLoading,setIsLoading}=useFetch()
  
   return (
     <div>
