@@ -14,7 +14,7 @@ import {
 import { AccountCircle } from "@mui/icons-material";
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 
-const FormComponent = ({info, setInfo}) => {
+const FormComponent = ({info, setInfo,handleSubmit}) => {
 
   const handleChange = (e) => {
 
@@ -52,7 +52,7 @@ const FormComponent = ({info, setInfo}) => {
     
       <Box style={{ backgroundColor: "white", padding: "20px" }}>
         
-        <form>
+        <form onSubmit={handleSubmit}>
           <Stack spacing={3} direction="column">
             <TextField
               variant="outlined"
