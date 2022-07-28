@@ -1,11 +1,21 @@
 import { getDatabase } from "firebase/database";
 import firebase from "./firebase"
-
-const database = getDatabase();
-
+import {  ref, set,push } from "firebase/database";
 
 
 
-export const AddUser=()=>{
+
+
+
+export const AddUser=(info)=>{
+
+    const db = getDatabase(firebase);
+    const userRef=ref(db,"users")
+    const newRef=push(userRef)
+    set(newRef,{
+        username:info.username,
+        phoneNumber:info.phoneNumber,
+        gender:info.gender
+    })
 
 }
